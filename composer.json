@@ -1,0 +1,18 @@
+{
+    "name": "vagrant/unit-test",
+    "authors": [
+        {
+            "name": "Ana Martinez",
+            "email": "ana@dragons.mx"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ]
+    }
+}
