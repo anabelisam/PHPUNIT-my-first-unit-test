@@ -1,16 +1,10 @@
 <?php
 
-class SmsOperator
+class SmsOperator implements SmsSender
 {
-    public function __constructor()
+    public function send($destination, $message)
     {
-    }
-
-    public function sendSms()
-    {
-        $clientEmulator = 'client.txt';
-        $handle = fopen($clientEmulator, 'w') or die('Cannot open file: '.$clientEmulator);
-        $message = "\n".'Your payment method has changed to cash';
+        $handle = fopen($destination, 'w') or die('Cannot open file: '.$destination); 
         $sendSms = fwrite($handle, $message);
         fclose($handle);
     }

@@ -4,14 +4,14 @@ class NotificationSender
 {
     private $service;
 
-    public function __construct()
+    public function __construct(SmsOperator $service)
     {
-        $this->service = new SmsOperator();
+        $this->service = $service;
     }
 
-    public function sendNotification()
+    public function sendNotification($destination, $message)
     {
-        $this->service->sendSms();
+        $this->service->send($destination, $message);
         return true;
     }
 }

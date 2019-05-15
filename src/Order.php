@@ -5,10 +5,6 @@ class Order
     private $status;
     private $payment_method;
 
-    public function __construct()
-    {
-    }
-
     public function setStatus($status)
     {
         $this->status = $status;
