@@ -67,6 +67,7 @@ class ComposerStaticInit7bc6241ef099d212150c7ec699491436
     );
 
     public static $classMap = array (
+        'NotificationSender' => __DIR__ . '/../..' . '/src/NotificationSender.php',
         'Order' => __DIR__ . '/../..' . '/src/Order.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -602,6 +603,7 @@ class ComposerStaticInit7bc6241ef099d212150c7ec699491436
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'SmsOperator' => __DIR__ . '/../..' . '/src/SmsOperator.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
