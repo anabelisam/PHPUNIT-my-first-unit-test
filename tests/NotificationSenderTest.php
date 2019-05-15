@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class NotificationSenderTest extends TestCase
 {
-    public function testSendSms()
+    public function testNotificationSender()
     {
         $service = $this->getMockBuilder(SmsOperator::class)
                         ->setMethods(['send'])
@@ -35,5 +35,5 @@ class NotificationSenderTest extends TestCase
         $service->send('cliente.txt', 'This is another sms');
     }
 
-    
+
 }
