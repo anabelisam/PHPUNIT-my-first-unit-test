@@ -25,7 +25,9 @@ class OrderTest extends TestCase
     {
         return [
             ['Packed', true],
-            ['Initialed', false],
+            ['Cancelled', false],
+            ['Initiated', false],
+            ['Validation', false],
         ];
     }
 }
