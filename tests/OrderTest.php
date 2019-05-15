@@ -6,7 +6,7 @@ class OrderTest extends TestCase
 {
 
     /**
-     * @dataProvider getPackedStatusData
+     * @dataProvider getStatusData
      */
     public function testOrderStatus($status, $expected)
     {
@@ -21,13 +21,32 @@ class OrderTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function getPackedStatusData() 
+    /**
+     * @dataProvider getPaymentMethodData
+     */
+    public function testPaymentMethod($method, $expected)
+    {
+        $order = new Order();
+        $order->setPaymentMethod($method);
+        $result = $order->isCreditCard();
+        $this->assertEquals($expected, $result);
+    }
+
+    public function getStatusData() 
     {
         return [
             ['Packed', true],
             ['Cancelled', false],
             ['Initiated', false],
             ['Validation', false],
+        ];
+    }
+
+    public function getPaymentMethodData() 
+    {
+        return [
+            ['cash', false],
+            ['credit card', true]
         ];
     }
 }
