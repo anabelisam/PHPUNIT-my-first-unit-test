@@ -5,6 +5,9 @@ use PHPUnit\Framework\TestCase;
 class OrderTest extends TestCase
 {
 
+    /**
+     * @dataProvider getPackedStatusData
+     */
     public function testOrderStatus($status, $expected)
     {
         // Arrange
